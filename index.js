@@ -13,13 +13,13 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const apiURL = 'https://api.f1cityrestoration.com'
+const apiURL = 'https://api.ttfconstruction.com'
 
 
 let data;
 
 async function getContacts(){
-    await fetch(apiURL + '/getNewConstructions.php')
+    await fetch(apiURL + '/getNewCustomers.php')
     .then(result => result.json())
     .then(result => data = result)
 }
@@ -63,8 +63,8 @@ app.post('/sendEmail', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'info@f1cityrestoration.com',
-                pass: 'fzbkndwuhxuhvvnu'
+                user: 'diego@ttfscaffolding.com',
+                pass: 'brfplzjbgvvcftjk'
             }
         });
         
@@ -86,15 +86,13 @@ app.post('/sendEmail', async (req, res) => {
             const batch = data.slice(i, i + BATCH_SIZE);
             for (let j = 0; j < batch.length; j++) {
                 const customerMailOptions = {
-                    from: 'info@f1cityrestoration.com',
+                    from: 'diego@ttfscaffolding.com',
                     to: batch[j].email,
-                    subject: 'Course of Construction Water Damage Mitigation Services & Expanded Construction Offerings',
-                    template: 'newConstruction1',
+                    subject: 'Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions',
+                    template: 'newCustomers1',
                     context: { 
-                        name: batch[j].name,
-                        lastName: batch[j].lastName,
-                        // company: batch[j].company,
-                        imgURL: `https://mailer-f1-city-restoration.vercel.app/image/${batch[j].email}?campaign=NewConstruction1`
+                        email: batch[j].email, 
+                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=NewCustomers1`
                     }
                 };
                 try {
