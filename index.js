@@ -64,7 +64,7 @@ app.post('/sendEmail', async (req, res) => {
             service: 'gmail',
             auth: {
                 user: 'diego@ttfscaffolding.com',
-                pass: 'brfplzjbgvvcftjk'
+                pass: 'rxrrntgbzhqigqso' // Ensure this is secured
             }
         });
         
@@ -118,13 +118,13 @@ app.post('/sendEmail', async (req, res) => {
 
 
 app.post('/sendTest', async (req, res) => {
-    await getContacts()
+    // await getContacts()
     try {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'info@f1cityrestoration.com',
-                pass: 'fzbkndwuhxuhvvnu'
+                user: 'diego@ttfscaffolding.com',
+                pass: 'rxrrntgbzhqigqso' // Ensure this is secured
             }
         });   
         const handlebarOptions = {
@@ -138,15 +138,14 @@ app.post('/sendTest', async (req, res) => {
         };
         transporter.use('compile', hbs(handlebarOptions));
         const customerMailOptions = {
-            from: 'info@f1cityrestoration.com',
-            to: 'diego@f1cityrestoration.com', 
-            subject: 'Course of Construction Water Damage Mitigation Services & Expanded Construction Offerings',
-            template: 'newConstruction1',
+            from: 'info@ttfscaffolding.com',
+            to: 'diego@ttfscaffolding.com', 
+            subject: 'Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions',
+            template: 'linkedin',
             context: { 
                 name: 'Diego',
                 lastName: 'Espinosa',
-                company: "Company Name", 
-                imgURL: `https://mailer-f1-city-restoration.vercel.app/image/diego@f1cityrestoration.com?campaign=NewConstruction1`, 
+                imgURL: `https://mailer-ttfscaffolding.vercel.app/image/diego@ttfscaffolding.com?campaign=Linkedin`, 
             }
         };
         try {

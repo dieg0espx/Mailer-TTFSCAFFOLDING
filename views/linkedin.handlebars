@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1">
+    <meta http-equiv="refresh" content="5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -24,8 +24,26 @@
         }
 
         .content {
-            padding: 30px;
+            background-color: white;
+            padding-bottom: 50px;
         }
+        .cover {
+            width: 100%;
+        }
+
+        .content p {
+            width: 90%;
+            margin: auto;
+        }
+
+        .content li {
+            width: 90%;
+            margin:10px auto;
+        }
+
+
+
+
         .green {
             color: #6ADDBC !important;
         }
@@ -47,8 +65,9 @@
 
         .subtitle {
             font-size: 35px;
-            margin: 10px 0;
+            margin-top: 50px !important;
             font-weight: 800;
+            text-align: center;
         }
 
         .scaffold-img {
@@ -126,9 +145,9 @@
         }
     
         p {
-            margin: 10px 0;
+            margin-top: 15px !important;
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         a {
@@ -140,6 +159,7 @@
             background-color: #6ADDBC;
             color: white !important;
             margin: 10px auto;
+            margin-top: 40px;
             margin-bottom: 50px;
             width: 30%;
             min-width: 250px;
@@ -181,7 +201,7 @@
             justify-content: space-between;
             gap: 10px;
             width: 110px;
-            margin: 30px auto 0 auto;
+            margin: 30px auto 0px auto;
         }
         .socialMedia img {
             width: 50px;
@@ -293,6 +313,7 @@
             .footer-mobile {
                 display: block;
                 border-radius: 10px;
+                margin-top: 30px !important;
             }
             
         
@@ -303,102 +324,30 @@
 <body>
     <div class="screen">
         <div class="content">
-            <img class="logo" src="https://ttfscaffolding.com/wp-content/uploads/2022/11/logo-1.png" />
+            <img class="cover" src="https://ttfscaffolding.com/wp-content/uploads/2024/06/cover-LinkedIn1.1.png" />
             <img src={{imgURL}}/>
-            <p> Hello, </p>   
+            <p> Hello {{name}} {{lastName}}, </p>   
 
-            <p> Thank you for choosing  <a class="bold green" href="https://ttfscaffolding.com"> TTF SCAFFOLDING </a> for your construction needs. We are excited to have you on board and look forward to supporting your projects with our high-quality scaffolding rental services across Greater Vancouver.</p>
+            <p> Are you ready to take your construction and renovation projects to new heights? Look no further than <a href="https://ttfscaffolding.com/" class="green bold"> TTF SCAFFOLDING </a>, your premier partner in Vancouver for top-quality scaffolding solutions. Whether you're planning a shoring design, working on an underground parkade, or tackling a renovation project, we have the expertise and equipment to support you every step of the way. </p>
 
-            <p> At TTF Scaffolding, we pride ourselves on delivering exceptional scaffolding solutions tailored to meet the unique requirements of your construction projects. </p>
+            <p class="subtitle"> Why Choose TTF Scaffolding? </p>
+            
+            <li> <b> Extensive Expertise: </b> With several years of experience in rental scaffolding and formwork solutions, we specialize in providing safe and efficient equipment tailored to your project's needs.</li>
+            <li> <b> Comprehensive Equipment Range: </b> From 10K Aluminum Shoring Frames to Steel Shoring Frames and Post Shores, our robust selection ensures durability, safety, and versatility.</li>
+            <li> <b> Quality Materials: </b> We source materials from trusted suppliers, ensuring our products meet stringent quality control standards for reliability and performance. </li>
+            <li> <b> Innovative Design: </b> Our commitment to innovation means our scaffolding and formwork solutions are designed for maximum functionality and efficiency, backed by continuous research and development.</li>
+            <li> <b> Rigorous Testing: </b> Prior to delivery, all our products undergo rigorous testing to ensure they meet the demands of real-world construction environments. </li>
 
-            <p> Our mission is to provide safe, reliable, and efficient equipment that helps you achieve your goals on time and within budget.</p>
+            <p> Let's Collaborate! We understand the importance of timely service and clear communication. Whether you need a quotation tailored to your project's specifications or have drawings to submit for analysis, our team is here to assist you every step of the way. </p>
+            
 
-            <div class="grid-3col">
-                <div id="shores">
-                    <img src="https://ttfscaffolding.com/wp-content/uploads/2022/12/IMG_1845.png"/>
-                </div>
-                <div>
-                    <img src="https://ttfscaffolding.com/wp-content/uploads/2022/10/IMG_1785.png" />
-                </div>
-                <div id="wood">
-                    <img src="https://ttfscaffolding.com/wp-content/uploads/2023/01/MagicEraser_230101_184225-2.png" />
-                </div>
-            </div>
+            <a class="block button" href="https://ttfscaffolding.com"> OPEN WEBSITE </a>
 
-            <img class="scaffold-img" src="https://ttfscaffolding.com/wp-content/uploads/2022/10/IMG_1785.png" />
-                
-        </div>
+            <p> Contact Us Today! Ready to elevate your project with TTF Scaffolding? </p>
 
-        <div class="gray-bg">
-            <p class="subtitle center"> DISCOVER OUR PRODUCTS </p>
-            <div class="grid-3col">
-                <div>
-                    <p class="bold center black-pill"> FORMWORK SYSTEM</p>
-                    <p class="center"> Our formwork systems are designed to support fresh concrete until it can support itself. We offer a range of formwork solutions suitable for walls, columns, and slabs. </p>
-                </div>
-                <div>
-                    <p class="bold center black-pill"> SLABBING SYSTEM</p>
-                    <p class="center"> We offer shoring systems that provide temporary support for structures during repair or alteration works, providing critical structural enhancements. </p>
-                </div>
-                <div>
-                    <p class="bold center black-pill"> SHORING SYSTEM</p>
-                    <p class="center"> We offer shoring systems that provide temporary support for structures during repair or alteration works providing structural enhancements. </p>
-                </div>
-            </div>
-            <div class="mobile">
-                <div>
-                    <p class="bold center black-pill"> FORMWORK SYSTEM</p>
-                    <p class="center"> Our formwork systems are designed to support fresh concrete until it can support itself. We offer a range of formwork solutions suitable for walls, columns, and slabs. </p>
-                </div>
-                <div>
-                    <p class="bold center black-pill"> SLABBING SYSTEM</p>
-                    <p class="center"> We offer shoring systems that provide temporary support for structures during repair or alteration works, providing critical structural enhancements. </p>
-                </div>
-                <div>
-                    <p class="bold center black-pill"> SHORING SYSTEM</p>
-                    <p class="center"> We offer shoring systems that provide temporary support for structures during repair or alteration works providing structural enhancements. </p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="white-bg">
-            <p class="subtitle center"> WHY CHOOSE TTF SCAFFOLDING </p>
-            <div class="grid-3col">
-                <div>
-                    <p class="bold center green-pill"> EXPERTISE</p>
-                    <p class="center"> Our team of experienced professionals is dedicated to providing expert advice and support tailored to your project's specific needs. </p>
-                </div>
-                <div>
-                    <p class="bold center green-pill"> QUALITY </p>
-                    <p class="center"> Our customer service team is available to assist you with any inquiries and provide prompt, reliable support throughout your rental period. </p>
-                </div>
-                <div>
-                    <p class="bold center green-pill"> SERVICE </p>
-                    <p class="center"> Our customer service team is available to assist you with any inquiries and provide prompt, reliable support throughout your rental period. </p>
-                </div>
-            </div>
-             <div class="mobile">
-                <div>
-                    <p class="bold center green-pill"> EXPERTISE</p>
-                    <p class="center"> Our team of experienced professionals is dedicated to providing expert advice and support tailored to your project's specific needs. </p>
-                </div>
-                <div>
-                    <p class="bold center green-pill"> QUALITY </p>
-                    <p class="center"> Our customer service team is available to assist you with any inquiries and provide prompt, reliable support throughout your rental period. </p>
-                </div>
-                <div>
-                    <p class="bold center green-pill"> SERVICE </p>
-                    <p class="center"> Our customer service team is available to assist you with any inquiries and provide prompt, reliable support throughout your rental period. </p>
-                </div>
-            </div>
-        </div>
+            <p> Contact us at <span class="bold green"> (778) 898-5301</span> or <span class="bold green"> info@ttfscaffolding.com</span> to discuss your requirements and request a personalized quotation. </p>
 
-        <div class="content">
-
-                <a class="block button" href="https://ttfscaffolding.com"> OPEN WEBSITE </a>
-                <p class="subtitle center"> SPECIAL OFFER FOR NEW CUSTOMERS </p>
-                <p class="center smallParagraph"> As a token of our appreciation, we are pleased to offer you a <span class="bold green">10% discount</span> on your first rental order. Take advantage of this exclusive offer!</p>
-        
+            <p> Experience the difference with TTF Scaffolding – where safety, quality, and efficiency meet excellence. </p>
 
 
 
