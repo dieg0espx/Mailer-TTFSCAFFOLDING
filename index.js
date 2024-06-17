@@ -82,7 +82,7 @@ app.post('/sendEmail', async (req, res) => {
         const DELAY_BETWEEN_BATCHES = 60000; // 1 minute in milliseconds
         const BATCH_SIZE = 10;
 
-        for (let i = 0; i < data.length; i += BATCH_SIZE) {
+        for (let i = 9; i < data.length; i += BATCH_SIZE) {
             const batch = data.slice(i, i + BATCH_SIZE);
             for (let j = 0; j < batch.length; j++) {
                 const customerMailOptions = {
