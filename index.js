@@ -89,10 +89,10 @@ app.post('/sendEmail', async (req, res) => {
                     from: 'diego@ttfscaffolding.com',
                     to: batch[j].email,
                     subject: 'Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions',
-                    template: 'newCustomers1',
+                    template: 'linkedin',
                     context: { 
                         email: batch[j].email, 
-                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=NewCustomers1`
+                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=Linkedin0-500`
                     }
                 };
                 try {
