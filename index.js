@@ -91,6 +91,8 @@ app.post('/sendEmail', async (req, res) => {
                     subject: 'Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions',
                     template: 'linkedin',
                     context: { 
+                        name: batch[j].name, 
+                        lastName: batch[j].lastName, 
                         email: batch[j].email, 
                         imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=Linkedin0-500`
                     }
