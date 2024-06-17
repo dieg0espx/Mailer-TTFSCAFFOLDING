@@ -19,7 +19,7 @@ const apiURL = 'https://api.ttfconstruction.com'
 let data;
 
 async function getContacts(){
-    await fetch(apiURL + '/getNewCustomers.php')
+    await fetch(apiURL + '/getLinkedinContacts.php')
     .then(result => result.json())
     .then(result => data = result)
 }
