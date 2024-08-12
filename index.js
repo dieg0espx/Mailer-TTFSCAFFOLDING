@@ -68,7 +68,7 @@ app.post('/sendEmail', async (req, res) => {
             }
         });
         
-        const handlebarOptions = {
+        const handlebarOptions = { 
             viewEngine: {
                 extName: '.handlebars',
                 partialsDir: path.resolve('./views'),
@@ -82,7 +82,7 @@ app.post('/sendEmail', async (req, res) => {
         const DELAY_BETWEEN_BATCHES = 60000; // 1 minute in milliseconds
         const BATCH_SIZE = 10;
 
-        for (let i = 9; i < data.length; i += BATCH_SIZE) {
+        for (let i = 0; i < data.length; i += BATCH_SIZE) {
             const batch = data.slice(i, i + BATCH_SIZE);
             for (let j = 0; j < batch.length; j++) {
                 const customerMailOptions = {
@@ -94,7 +94,7 @@ app.post('/sendEmail', async (req, res) => {
                         name: batch[j].name, 
                         lastName: batch[j].lastName, 
                         email: batch[j].email, 
-                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=Linkedin0-500`
+                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=Introduction`
                     }
                 };
                 try {
