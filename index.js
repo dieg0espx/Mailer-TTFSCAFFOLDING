@@ -56,6 +56,10 @@ app.get('/image/:email', async (req, res) => {
     res.sendFile(path.join(__dirname, 'images/pixel.png'));
 });
 
+app.post('/getContacts', async (req, res) => {
+    await getContacts()
+    res.json(data)
+});
   
 app.post('/sendEmail', async (req, res) => {
     await getContacts()
@@ -155,6 +159,51 @@ app.post('/sendTest', async (req, res) => {
             res.status(200).send('TEST EMAIL SENT ');
         } catch (error) {
             console.error('ERROR SENDIN MAIL: ', error);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Error sending emails');
+    }
+});
+
+app.post('/sendInventoryCode', async (req, res) => {
+    const fullName = req.query.fullName;
+    const code = req.query.code;
+    const destinatary = req.query.destinatary;
+
+    try {
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'diego@ttfscaffolding.com',
+                pass: 'rxrrntgbzhqigqso' // Ensure this is secured
+            }
+        });   
+        const handlebarOptions = {
+            viewEngine: {
+                extName: '.handlebars',
+                partialsDir: path.resolve('./views'),
+                defaultLayout: false,
+            },
+            viewPath: path.resolve('./views'),
+            extName: '.handlebars',
+        };
+        transporter.use('compile', hbs(handlebarOptions));
+        const customerMailOptions = {
+            from: 'diego@ttfscaffolding.com',
+            to: [destinatary, 'diego@ttfscaffolding.com'], 
+            subject: 'Welcome to TTF Scaffolding: Your Rental Eqipment Details',
+            template: 'InventoryCode',
+            context: { 
+                fullName: fullName, 
+                code: code, 
+            }
+        };
+        try {
+            await transporter.sendMail(customerMailOptions);
+            res.status(200).send('INVENTORY CODE EMAIL SENT ');
+        } catch (error) {
+            console.error('ERROR SENDING MAIL: ', error);
         }
     } catch (error) {
         console.error('Error:', error);

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions</title>
+     <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.6;
+            margin: auto;
+            background-color: aliceblue !important;
+            color: #333;
+        }
+        .screen {
+            max-width: 1000px;
+            display: block;
+            margin: auto;
+        }
+
+        .content {
+            background-color: white;
+            padding-bottom: 50px;
+        }
+        .cover {
+            width: 100%;
+            margin-top: -20px;
+        }
+
+        .content p {
+            width: 90%;
+            margin: auto;
+        }
+
+        .content li {
+            width: 90%;
+            margin:10px auto;
+        }
+
+
+
+
+        .green {
+            color: #6ADDBC !important;
+        }
+       
+        .bold {
+            font-weight: bold;
+        }
+        .semi-bold {
+            font-weight: 600;
+        }
+        
+        .gray {
+            color: #7f7f7f !important;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .subtitle {
+            font-size: 45px;
+            margin-top: 50px !important;
+            margin-bottom: 40px !important;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .scaffold-img {
+            display: none;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .mobile {
+            display: none;
+        }
+
+        .grid-3col {
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+        }
+        .grid-3col img {
+            display: block;
+            width: 60%;
+            height: 100%;
+            margin: auto;
+            object-fit: contain;
+        }
+        .grid-3col p{
+            display: block;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .gray-bg {
+            background-color: #D9D9D9 !important;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+        .white-bg {
+            background-color: white !important;
+            padding: 10px 20px;
+        }
+        .center {
+            text-align: center !important;
+        }
+        .right {
+            text-align: right !important;
+        }
+        .smallParagraph {
+            width: 70%;
+            margin: auto;
+        }
+        .green-pill {
+            background-color: #6ADDBC;
+            color: white;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 1px 20px;
+            height: 20px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px !important;
+            line-height: 20px;
+        }
+        .black-pill {
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 1px 20px;
+            height: 20px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px !important;
+            line-height: 20px;
+        }
+    
+        p {
+            margin-top: 15px !important;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        a {
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .button {
+            background-color: #6ADDBC;
+            color: white !important;
+            margin: 10px auto;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            width: 30%;
+            min-width: 250px;
+            max-width: 400px;
+            height: 45px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 20px;
+        }
+
+        .logo {
+            display: block;
+            margin: auto;
+            width: 150px;
+        }
+        hr {
+            background-color: lightgray;
+            max-width: 80%;
+            min-width: 250px;
+        }
+        h2 {
+            font-size: 40px;
+            color: #1f2533;
+            text-align: center;
+        }
+        ul {
+            margin: 20px 0;
+            margin-left: -20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    
+        .socialMedia {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            width: 110px;
+            margin: 30px auto 0px auto;
+        }
+        .socialMedia img {
+            width: 50px;
+            display: block;
+            filter: grayscale(100%) contrast(100%);
+        }
+        .green-pill, .black-pill {
+            margin-bottom: 10px !important;
+        }
+
+
+        .footer {
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: right;
+        }
+        .footer img {
+            display:block;
+            width: 10%;
+            margin: auto auto auto 0;
+        }
+        .footer p {
+            color: white;
+            text-align: left;
+            width: 60%;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .footer a {
+            text-align: right;
+            color: white;
+            display: block;
+        }
+
+        .footer-mobile {
+            background-color: black;
+            display: none;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: right;
+        }
+        .footer-mobile img {
+            display:block;
+            width: 30%;
+            margin: 30px auto;
+        }
+        .footer-mobile p {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-mobile a {
+            text-align: center;
+            color: white;
+            display: block;
+            margin: 10px;
+        }
+
+
+
+        @media screen and (max-width:500px) {
+            .content {
+                padding: 0;
+            }
+
+            .mobile {
+                display: block;
+            }
+            .scaffold-img {
+                display: block;
+            }
+
+            .grid-3col {
+                display: none;
+            }
+            .subtitle {
+                font-size: 25px;
+            }
+            .gray-bg {
+                border-radius: 10px;
+            }
+            .smallParagraph {
+                width: 100%;
+                margin: auto;
+            }
+            .green-pill, .black-pill {
+                margin-top: 15px !important;
+            }
+
+            h2 {
+                line-height: 45px;
+            }
+            .other-services {
+               display: none;
+            }
+            .other-services-mobile {
+               display: block;
+            }
+            .footer {
+                display: none;
+            }
+            .footer-mobile {
+                display: block;
+                border-radius: 10px;
+                margin-top: 30px !important;
+            }
+            
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="content">
+            <img class="cover" src="https://ttfscaffolding.com/wp-content/uploads/2024/08/INVENTORY-CODE-8.5-x-10-in-1.png" />
+
+            <p class="subtitle"> Welcome  </p>
+
+            <p> Hello {{fullName}}, </p>   
+
+            <p>
+                We are pleased to welcome you as a valued partner at TTF SCAFFOLDING. As your reliable provider ot scattoldina solutions. we are committed to ensuring that vour prolect runs
+                smoothly win top-guanity equipment and exceptional service.
+            </p>
+            <p>
+                To help you manage your rental inventory efficiently, we have created a unique 4-digit access code for vour loo site: <b>{{code}}</b>. with this code. vou can track vour current inventory and view detailed information about your rental equipment directly on our website
+            </p>
+            <p>
+                Here's how you can access your inventory:
+            </p>
+        
+                <li>1. Visit our website: www.ttfscaffolding.com </li>
+                <li>2 Click on the "CUSTOMERS" tab </li>
+                <li>3. Enter your 4-digit access code: <b>{{code}}</b> </li>
+
+            <p>
+                This tool will allow you to monitor your equipment status in real-time, helping you stay on top of your project needs.
+            </p>
+            <p>
+                It you have any guestions or reguire turther assistance. please don't hesitate to reach out to our customer support team at diego@tttscattolding.com or call us at (778)898-5301.
+            </p>
+             <p>
+                Thank you for choosing TTF SCAFFOLDING. 
+            </p>
+            <p>
+                We look forward to supporting your project and contributing to its success
+            </p>
+            <p>
+                Best regards,
+            </p>
+
+            <a class="block button" href="https://ttfscaffolding.com"> OPEN WEBSITE </a>
+
+     
+            <div class="socialMedia">
+                <a href="https://www.facebook.com/profile.php?id=100089180063670&mibextid=LQQJ4d"> <img src="https://ttfscaffolding.com/wp-content/uploads/2024/06/5C6501E7-5AF6-4376-8BA7-73D54F4DCBD9.png" /></a>
+                <a href="https://www.instagram.com/ttfscaffolding"> <img src="https://ttfscaffolding.com/wp-content/uploads/2024/06/3B92BCC2-78AE-45B1-BFDE-C901A44FC7B7.png" /></a>
+            </div>
+            <p class="bold center">TTF SCAFFOLDING</p>
+        </div>
+
+        <div class="footer">
+            <div>
+                <img src="https://ttfscaffolding.com/wp-content/uploads/2023/05/logo-1.png" />
+                <p class="white"> For shoring design, underground parkades and renovation projects. Our customers vary from small to large scale, whatever your project we are here to assist you. </p>
+            </div>
+            <div>
+                <a href="tel:7788985301"> (778) 898-5301</a>
+                <a class="green" href="mailto:info@ttfscaffolding.com"> info@ttfscaffolding.com</a>
+                <a href="https://ttfscaffolding.com"> TTFSCAFFOLDING.com </a>
+                <a href="https://maps.app.goo.gl/8bSaU9hzYQu3f8JU8"> 10979 Olsen Rd, Surrey, BC V3V 3S9, Canada. </a>
+            </div>
+        </div>
+
+        <div class="footer-mobile">
+        <div>
+                <img src="https://ttfscaffolding.com/wp-content/uploads/2023/05/logo-1.png" />
+                <p class="white"> For shoring design, underground parkades and renovation projects. Our customers vary from small to large scale, whatever your project we are here to assist you. </p>
+            </div>
+            <div>
+                <a href="tel:7788985301"> (778) 898-5301</a>
+                <a class="green" href="mailto:info@ttfscaffolding.com"> info@ttfscaffolding.com</a>
+                <a href="https://ttfscaffolding.com"> TTFSCAFFOLDING.com </a>
+                <a href="https://maps.app.goo.gl/8bSaU9hzYQu3f8JU8"> 10979 Olsen Rd, Surrey, BC V3V 3S9, Canada. </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
