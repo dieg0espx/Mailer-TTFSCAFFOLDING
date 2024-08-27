@@ -192,7 +192,7 @@ app.post('/sendInventoryCode', async (req, res) => {
         const customerMailOptions = {
             from: 'diego@ttfscaffolding.com',
             to: [destinatary, 'diego@ttfscaffolding.com'], 
-            subject: 'Welcome to TTF Scaffolding: Your Rental Eqipment Details',
+            subject: 'Welcome to TTF Scaffolding: Your Rental Equipment Details',
             template: 'InventoryCode',
             context: { 
                 fullName: fullName, 
