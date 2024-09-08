@@ -150,8 +150,8 @@ app.post('/sendTest', async (req, res) => {
             subject: 'Post Shores, Beams, and More: Scaffolding Solutions for Every Need',
             template: 'products',
             context: { 
-                name: 'Maya',
-                lastName: 'Garbrecht',
+                name: 'Diego',
+                lastName: 'Espinosa',
                 imgURL: `https://mailer-ttfscaffolding.vercel.app/image/diego@ttfscaffolding.com?campaign=Linkedin`, 
             }
         };
