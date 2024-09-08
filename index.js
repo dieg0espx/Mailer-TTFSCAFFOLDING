@@ -98,7 +98,8 @@ app.post('/sendEmail', async (req, res) => {
                         name: batch[j].name, 
                         lastName: batch[j].lastName, 
                         email: batch[j].email, 
-                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=Introduction`
+                        companyName: batch[j].companyName, 
+                        imgURL: `https://mailer-ttfscaffolding.vercel.app/image/${batch[j].email}?campaign=Products`
                     }
                 };
                 try {
@@ -145,12 +146,12 @@ app.post('/sendTest', async (req, res) => {
         transporter.use('compile', hbs(handlebarOptions));
         const customerMailOptions = {
             from: 'info@ttfscaffolding.com',
-            to: 'diego@ttfscaffolding.com', 
-            subject: 'Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions',
-            template: 'linkedin',
+            to: ['maya.garbrecht@web.de', 'digo@ttfscaffolding.com'], 
+            subject: 'Post Shores, Beams, and More: Scaffolding Solutions for Every Need',
+            template: 'products',
             context: { 
-                name: 'Diego',
-                lastName: 'Espinosa',
+                name: 'Maya',
+                lastName: 'Garbrecht',
                 imgURL: `https://mailer-ttfscaffolding.vercel.app/image/diego@ttfscaffolding.com?campaign=Linkedin`, 
             }
         };

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Post Shores, Beams, and More: Scaffolding Solutions for Every Need</title>
+     <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.6;
+            margin: auto;
+            background-color: aliceblue !important;
+            color: #333;
+        }
+        .screen {
+            max-width: 1000px;
+            display: block;
+            margin: auto;
+        }
+
+        .content {
+            background-color: white;
+            padding-bottom: 50px;
+        }
+        .cover {
+            width: 100%;
+        }
+
+        .content p {
+            width: 90%;
+            margin: auto;
+        }
+
+        .content li {
+            width: 90%;
+            margin:10px auto;
+        }
+
+
+
+
+        .green {
+            color: #6ADDBC !important;
+        }
+       
+        .bold {
+            font-weight: bold;
+        }
+        .semi-bold {
+            font-weight: 600;
+        }
+        
+        .gray {
+            color: #7f7f7f !important;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .subtitle {
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: -20px !important;
+        }
+
+        .scaffold-img {
+            display: none;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .mobile {
+            display: none;
+        }
+
+        .grid-3col {
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+        }
+        .grid-3col img {
+            display: block;
+            width: 60%;
+            height: 100%;
+            margin: auto;
+            object-fit: contain;
+        }
+        .grid-3col p{
+            display: block;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .gray-bg {
+            background-color: #D9D9D9 !important;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+        .white-bg {
+            background-color: white !important;
+            padding: 10px 20px;
+        }
+        .center {
+            text-align: center !important;
+        }
+        .right {
+            text-align: right !important;
+        }
+        .smallParagraph {
+            width: 70%;
+            margin: auto;
+        }
+        .green-pill {
+            background-color: #6ADDBC;
+            color: white;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 1px 20px;
+            height: 20px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px !important;
+            line-height: 20px;
+        }
+        .black-pill {
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 1px 20px;
+            height: 20px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px !important;
+            line-height: 20px;
+        }
+    
+        p {
+            margin-top: 15px !important;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        a {
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .button {
+            background-color: #6ADDBC;
+            color: white !important;
+            margin: 10px auto;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            width: 30%;
+            min-width: 250px;
+            max-width: 400px;
+            height: 45px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 20px;
+        }
+
+        .logo {
+            display: block;
+            margin: auto;
+            width: 150px;
+        }
+        hr {
+            background-color: lightgray;
+            max-width: 80%;
+            min-width: 250px;
+        }
+        h2 {
+            font-size: 40px;
+            color: #1f2533;
+            text-align: center;
+        }
+        ul {
+            margin: 20px 0;
+            margin-left: -20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    
+        .socialMedia {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            width: 110px;
+            margin: 30px auto 0px auto;
+        }
+        .socialMedia img {
+            width: 50px;
+            display: block;
+            
+        }
+        .green-pill, .black-pill {
+            margin-bottom: 10px !important;
+        }
+
+
+        .footer {
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: right;
+        }
+        .footer img {
+            display:block;
+            width: 10%;
+            margin: auto auto auto 0;
+        }
+        .footer p {
+            color: white;
+            text-align: left;
+            width: 60%;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .footer a {
+            text-align: right;
+            color: white;
+            display: block;
+        }
+
+        .footer-mobile {
+            background-color: black;
+            display: none;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: right;
+        }
+        .footer-mobile img {
+            display:block;
+            width: 30%;
+            margin: 30px auto;
+        }
+        .footer-mobile p {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-mobile a {
+            text-align: center;
+            color: white;
+            display: block;
+            margin: 10px;
+        }
+
+
+
+
+
+        .grid-one {
+            display: flex;
+            gap:20px;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        .grid-one img {
+            width: 350px;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            gap:20px;
+            width: 90%;
+            margin: 20px auto;
+            border:1px solid lightgray;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .product img {
+            width: 200px;
+            margin-top: 15% !important;
+            margin-right: 5px !important;
+        }
+
+        .product .title {
+            margin: 0px !important;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px !important;
+        }
+
+        .product .body {
+            width: 100%;
+            margin: 0 !important;
+            font-weight: 400;
+            margin-bottom: 5px !important;
+        }
+
+        .product .button {
+            margin: 20px 20px 0 auto !important;
+            height: 30px;
+            line-height: 30px;
+            width: 200px;
+            min-width: 0;
+        }
+
+        .cover-mobile {
+            display: none;
+        }
+
+        @media screen and (max-width:500px) {
+            .content {
+                padding: 0;
+            }
+
+            .mobile {
+                display: block;
+            }
+            .scaffold-img {
+                display: block;
+            }
+            .cover {
+                display: none;
+            }
+            .cover-mobile {
+                display: block;
+            }
+
+            .grid-3col {
+                display: none;
+            }
+            .subtitle {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 auto!important;
+            }
+            .gray-bg {
+                border-radius: 10px;
+            }
+            .smallParagraph {
+                width: 100%;
+                margin: auto;
+            }
+            .green-pill, .black-pill {
+                margin-top: 15px !important;
+            }
+
+            h2 {
+                line-height: 45px;
+            }
+            .other-services {
+               display: none;
+            }
+            .other-services-mobile {
+               display: block;
+            }
+            .footer {
+                display: none;
+            }
+            .footer-mobile {
+                display: block;
+                margin-top: 30px !important;
+            }
+
+
+            .grid-one {
+                display: block;
+                width: 100% !important;
+            }
+            .grid-one img {
+                display: none;
+            }
+
+            .product {
+                display: block;
+                width: 80%;
+                margin: 20px auto !important;
+            }
+
+            .product img {
+                display: block;
+                text-align: center;
+                margin: 30px auto !important;
+            }
+
+            .product .title, 
+            .product .body {
+                text-align: center;
+                width: 100% !important;
+            }
+
+            .product .button {
+                margin: 30px auto !important;
+            }
+            
+            .unsuscribe {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        
+        }
+
+        .unsuscribe {
+            text-align: center;
+            background-color: black;
+            color: gray;
+            display: block;
+            font-size: 10px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="content">
+            <img class="cover" src="https://ttfscaffolding.com/wp-content/uploads/2024/09/PRODUCTS-MAILING-CAMPAING-2.png" />
+            <img class="cover-mobile" src="https://ttfscaffolding.com/wp-content/uploads/2024/09/PRODUCTS-MAILING-CAMPAING-3.png" />
+            <img src={{imgURL}}/>
+
+            <div class="grid-one">
+                <div> 
+                    <img src="https://ttfscaffolding.com/wp-content/uploads/2022/10/IMG_1785.png" />
+                </div>
+                <div>
+                    <p> Dear {{name}} {{lastName}}, </p>
+                    <p> At TTF Scaffolding, we believe that {{companyName}} is the perfect partner for our high-performance scaffolding solutions. With years of experience and a deep commitment to quality, we understand the importance of having reliable equipment on your job site. </p>
+                    <p> Our extensive product lineup not only guarantees safety and efficiency but also offers unmatched durability, ensuring that your project progresses smoothly from start to finish.  </p>
+                    <p> Whether you're working on a small renovation or a large-scale construction project, you can trust our scaffolding solutions to provide the support and stability that {{companyName}} needs for success.</p>
+                </div>
+            </div>
+
+            <p class="subtitle"> Discover Our Most Popular Products  </p>
+            <p class="subtitle"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-chevron-compact-down" viewBox="0 0 16 16"></svg>
+                    <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+                </svg>
+            </p>
+
+            <div class="product">
+                <div>
+                    <img src="https://ttfscaffolding.com/wp-content/uploads/2022/12/IMG_1847.png" />
+                </div>
+                <div>
+                    <p class="title"> Aluminum and Steel Frames </p>
+                    <p class="body"> The high-strength aluminum alloy frames are designed for easy handling and quick setup, making them ideal for projects requiring lightweight yet robust support. On the other hand, our high-quality steel frames are built to withstand more demanding conditions, providing reliable performance in various configurations, steps, and slopes.  </p>
+                    <p class="body"> Both frame types are available in multiple sizes to ensure a perfect fit for your specific requirements. </p>
+                    <a class="block button" href="https://ttfscaffolding.com/products"> Read More </a>
+                </div>
+            </div>
+            
+            <div class="product">
+                <div>
+                    <img src="https://ttfscaffolding.com/wp-content/uploads/2022/12/IMG_1845.png" />
+                </div>
+                <div>
+                    <p class="title">Post Shores </p>
+                    <p class="body"> Our Post Shores are designed to be both adaptable and strong, making them an essential component for light construction and re-shoring projects. Crafted from high-quality materials, these shores provide the stability and support necessary to ensure your project's success. </p>
+                    <p class="body"> The innovative design includes quick-release pins, allowing for swift and effortless adjustments, which saves time and increases efficiency on the job site. </p>
+                    <a class="block button" href="https://ttfscaffolding.com/products"> Read More </a>
+                </div>
+            </div>
+
+            <div class="product">
+                <div>
+                    <img src="https://ttfscaffolding.com/wp-content/uploads/2022/12/IMG_1850.png" />
+                </div>
+                <div>
+                    <p class="title">Aluminum Beams </p>
+                    <p class="body"> Whether you’re working on shoring, formwork, or fly form systems, these beams are engineered to deliver exceptional performance and reliability.</p>
+                    <p class="body"> Constructed from high-grade structural alloy 6351-T6, which offers superior strength compared to other alloys, our beams are built to withstand the rigors of demanding construction environments. Their lightweight design makes them easier to handle and install, reducing labor costs and time on-site, while still providing the robust support. </p>
+                    <a class="block button" href="https://ttfscaffolding.com/products"> Read More </a>
+                </div>
+            </div>
+
+            <div class="product">
+                <div>
+                    <img src="https://ttfscaffolding.com/wp-content/uploads/2023/01/MagicEraser_230101_184225-2.png" />
+                </div>
+                <div>
+                    <p class="title">Wood Beams </p>
+                    <p class="body"> Our wood beams are designed to support scaffolding structures, making them a vital component in any project where stability and safety are paramount. The natural resilience of wood offers a unique combination of flexibility and strength, allowing these beams to effectively bear heavy loads while adapting to the specific demands of your construction site. </p>
+                    <p class="body"> Each beam is meticulously processed to maintain its structural integrity over time, ensuring that it remains a dependable part of your scaffolding setup even under challenging conditions. </p>
+                    <a class="block button" href="https://ttfscaffolding.com/products"> Read More </a>
+                </div>
+            </div>
+
+
+            <a class="block button" href="https://ttfscaffolding.com"> OPEN WEBSITE </a>
+
+            <p> Contact Us Today! Ready to elevate your project with TTF Scaffolding? </p>
+
+            <p> Contact us at <span class="bold green"> (778) 898-5301</span> or <span class="bold green"> info@ttfscaffolding.com</span> to discuss your requirements and request a personalized quotation. </p>
+
+            <p> Experience the difference with TTF Scaffolding – where safety, quality, and efficiency meet excellence. </p>
+
+
+
+            <div class="socialMedia">
+                <a href="https://www.facebook.com/profile.php?id=100089180063670&mibextid=LQQJ4d"> <img src="https://ttfscaffolding.com/wp-content/uploads/2024/06/5C6501E7-5AF6-4376-8BA7-73D54F4DCBD9.png" /></a>
+                <a href="https://www.instagram.com/ttfscaffolding"> <img src="https://ttfscaffolding.com/wp-content/uploads/2024/06/3B92BCC2-78AE-45B1-BFDE-C901A44FC7B7.png" /></a>
+            </div>
+            <p class="bold center">TTF SCAFFOLDING</p>
+        </div>
+
+        <div class="footer">
+            <div>
+                <img src="https://ttfscaffolding.com/wp-content/uploads/2023/05/logo-1.png" />
+                <p class="white"> For shoring design, underground parkades and renovation projects. Our customers vary from small to large scale, whatever your project we are here to assist you. </p>
+            </div>
+            <div>
+                <a href="tel:7788985301"> (778) 898-5301</a>
+                <a class="green" href="mailto:info@ttfscaffolding.com"> info@ttfscaffolding.com</a>
+                <a href="https://ttfscaffolding.com"> TTFSCAFFOLDING.com </a>
+                <a href="https://maps.app.goo.gl/8bSaU9hzYQu3f8JU8"> 10979 Olsen Rd, Surrey, BC V3V 3S9, Canada. </a>
+            </div>
+        </div>
+
+
+        <div class="footer-mobile">
+        <div>
+                <img src="https://ttfscaffolding.com/wp-content/uploads/2023/05/logo-1.png" />
+                <p class="white"> For shoring design, underground parkades and renovation projects. Our customers vary from small to large scale, whatever your project we are here to assist you. </p>
+            </div>
+            <div>
+                <a href="tel:7788985301"> (778) 898-5301</a>
+                <a class="green" href="mailto:info@ttfscaffolding.com"> info@ttfscaffolding.com</a>
+                <a href="https://ttfscaffolding.com"> TTFSCAFFOLDING.com </a>
+                <a href="https://maps.app.goo.gl/8bSaU9hzYQu3f8JU8"> 10979 Olsen Rd, Surrey, BC V3V 3S9, Canada. </a>
+            </div>
+        </div>
+    </div>
+
+    <a class="unsuscribe" href="https://ttfscaffolding.com/unsuscribe"> Unsuscribe </a>
+</body>
+</html>
