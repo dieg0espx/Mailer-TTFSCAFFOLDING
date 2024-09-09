@@ -146,7 +146,7 @@ app.post('/sendTest', async (req, res) => {
         transporter.use('compile', hbs(handlebarOptions));
         const customerMailOptions = {
             from: 'info@ttfscaffolding.com',
-            to: ['maya.garbrecht@web.de', 'digo@ttfscaffolding.com'], 
+            to: 'digo@ttfscaffolding.com', 
             subject: 'Post Shores, Beams, and More: Scaffolding Solutions for Every Need',
             template: 'products',
             context: { 
