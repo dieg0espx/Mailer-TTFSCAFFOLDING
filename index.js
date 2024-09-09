@@ -92,8 +92,8 @@ app.post('/sendEmail', async (req, res) => {
                 const customerMailOptions = {
                     from: 'diego@ttfscaffolding.com',
                     to: batch[j].email,
-                    subject: 'Welcome to TTF Scaffolding: Your Trusted Partner for Quality Construction Solutions',
-                    template: 'linkedin',
+                    subject: 'Post Shores, Beams, and More: Scaffolding Solutions for Every Need',
+                    template: 'products',
                     context: { 
                         name: batch[j].name, 
                         lastName: batch[j].lastName, 
